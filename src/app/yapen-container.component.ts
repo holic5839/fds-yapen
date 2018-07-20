@@ -20,6 +20,7 @@ export interface Room {
   <app-yapen-reserve></app-yapen-reserve>
   <app-yapen-pay></app-yapen-pay>
 `,
+
   styles: []
 })
 
