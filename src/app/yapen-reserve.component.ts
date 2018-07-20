@@ -5,27 +5,22 @@ import { Room } from './yapen-container.component';
 @Component({
   selector: 'app-yapen-reserve',
   template: `
-    <!-- *ngFor="let room of rooms" -->
     <section class="reserve">
-      <table class="reserve-table" *ngFor="let room of rooms">
+      <table class="reserve-table">
         <tr>
-          <td>펜션명</td>
-          <td>{{ room.roomName }}</td>
+          <td>이름</td>
+          <td>애월펜션</td>
+        </tr>
+        <tr>
+          <td>가격</td>
+          <td>256,000<span>원</span></td>
         </tr>
         <tr>
           <td>지역</td>
-          <td>{{ room.roomRegion }}</td>
-        </tr>
-        <tr>
-          <td>크기</td>
-          <td>{{ room.roomSize }} <span>평</span></td>
-        </tr>
-        <tr>
-          <td>요금</td>
-          <td>{{ room.roomFee }} <span>원</span></td>
+          <td>제주도</td>
         </tr>
       </table>
-      <button type="submit" class="btn-reserve">예약하기</button>
+      <button type="submit" class="btn-reserve" (click)="moveToPayPage()">예약하기</button>
     </section>
 
   `,
@@ -62,6 +57,10 @@ export class YapenReserveComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  moveToPayPage() {
+    location.href = 'http://localhost:4200/#/pay';
   }
 
 }

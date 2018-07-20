@@ -5,12 +5,12 @@ import { Room } from './yapen-container.component';
 @Component({
   selector: 'app-yapen-list',
   template: `
-  <ul>
-    <li *ngFor="let room of rooms">
-      이름 : {{ room.roomName }} 가격 : {{ room.roomFee }} 지역 : {{ room.roomRegion }}
-    </li>
-  </ul>
-  <button class="btn" type="submit" value="list" onclick="">상세 정보 보기</button>
+    <ul>
+      <li>이름 : 애월펜션</li>
+      <li>가격 : 256,000</li>
+      <li>지역 : 제주도</li>
+    </ul>
+  <button class="btn" type="submit" value="list" (click)="moveToReservePage()">상세 정보 보기</button>
   `,
   styles: []
 })
@@ -20,6 +20,10 @@ export class YapenListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  moveToReservePage() {
+    location.href = 'http://localhost:4200/#/reserve';
   }
 
 }
