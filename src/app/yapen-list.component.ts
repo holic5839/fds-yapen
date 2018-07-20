@@ -10,6 +10,7 @@ import { Room } from './yapen-container.component';
      <li> 가격 : {{ room.roomFee }} </li>
      <li> 지역 : {{ room.roomRegion }} </li>
    </ul>
+   <button class="btn" type="submit" value="list" onclick="">상세 정보 보기</button>
   `,
   styles: []
 })
