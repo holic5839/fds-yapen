@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
     <input type="search" id="search-keyword" autofocus placeholder="지역을 입력하세요."
       [(ngModel)]="content"
       (keyup.enter)="keyupHandler($event.target.value)">
-      <a routerLink="./list"></a>
-      <router-outlet></router-outlet>
   `,
   styles: []
 })
