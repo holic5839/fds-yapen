@@ -1,26 +1,26 @@
 // Jang Geunho
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-yapen-searchbar',
   template: `
     <input type="search" id="search-keyword" autofocus placeholder="지역을 입력하세요."
-       (keyup.enter)="keyupHandler()">
+      [(ngModel)]="content"
+      (keyup.enter)="keyupHandler($event.target.value)">
       <a routerLink="./list"></a>
       <router-outlet></router-outlet>
   `,
   styles: []
 })
+
 export class YapenSearchbarComponent implements OnInit {
   content = '';
-  // @Output() keyuphandler = new EventEmitter<string>();
-  ngOnInit() {
+
+  keyupHandler(content) {
+    if ( !content ) { alert('검색어를 입력하세요.'); }
+    this.content = '';
+    location.href = 'http://localhost:4200/#/list';
   }
 
-  keyupHandler() {
-    if ( !this.content ) { return alert('검색어를 입력하세요.'); }
-    // this.searchDo.emit(this.content);
-    this.content = '';
-    // console.log('zz');
-  }
+  ngOnInit() {}
 }

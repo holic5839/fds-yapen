@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRouterModule } from './yapen-route';
 
 import { AppComponent } from './app.component';
 import { YapenHeaderComponent } from './yapen-header.component';
@@ -10,7 +11,8 @@ import { YapenSearchbarComponent } from './yapen-searchbar.component';
 import { YapenListComponent } from './yapen-list.component';
 import { YapenReserveComponent } from './yapen-reserve.component';
 import { YapenPayComponent } from './yapen-pay.component';
-import { AppRouterModule } from './app.router.module';
+
+
 
 @NgModule({
   declarations: [
@@ -23,16 +25,15 @@ import { AppRouterModule } from './app.router.module';
     YapenReserveComponent,
     YapenPayComponent
   ],
+  
   imports: [
+    AppRouterModule,
     BrowserModule,
     FormsModule,
-    AppRouterModule
   ],
   
   providers: [],
   bootstrap: [AppComponent]
 })
-
-
 
 export class AppModule { }
