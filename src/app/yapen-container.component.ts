@@ -1,6 +1,7 @@
 // ***** 수정 금지 ***** //
 
 import { Component, OnInit } from '@angular/core';
+
 export interface Room {
   id: number;
   roomName: string;
@@ -13,7 +14,6 @@ export interface Room {
   selector: 'app-yapen-container',
   template: `
   <app-yapen-header></app-yapen-header>
-  <app-yapen-footer></app-yapen-footer>
   <app-yapen-searchbar></app-yapen-searchbar>
   <app-yapen-list></app-yapen-list>
   <app-yapen-reserve></app-yapen-reserve>
