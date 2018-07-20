@@ -13,12 +13,6 @@ export interface Room {
 @Component({
   selector: 'app-yapen-container',
   template: `
-
-  <app-yapen-header></app-yapen-header>
-  <app-yapen-searchbar></app-yapen-searchbar>
-  <app-yapen-list></app-yapen-list>
-  <app-yapen-reserve></app-yapen-reserve>
-  <app-yapen-pay></app-yapen-pay>
 `,
 
   styles: []

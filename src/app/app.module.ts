@@ -25,13 +25,13 @@ import { YapenPayComponent } from './yapen-pay.component';
     YapenReserveComponent,
     YapenPayComponent
   ],
-  
+
   imports: [
     AppRouterModule,
     BrowserModule,
     FormsModule,
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })
