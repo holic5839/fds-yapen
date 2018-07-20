@@ -3,9 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-yapen-header',
   template: `
-    <p>
-      yapen-header works!
-    </p>
   `,
   styles: []
 })
