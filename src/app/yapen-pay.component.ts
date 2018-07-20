@@ -4,8 +4,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-yapen-pay',
   template: `
-    <label><input type="radio">무통장 입금</label>
 
+  <section class="pay">
+    <label><input type="radio">무통장 입금</label>
     <form action="">
       <ul>
         <li>입금은행:
@@ -19,12 +20,20 @@ import { Component, OnInit } from '@angular/core';
         </li>
         <li>입금자명: <input type="text" name="userName" [(ngModel)]="name" (keyup.enter)="getUserName()">
         </li>
-        <li><input type="submit" value="결제하기">
-        </li>
       </ul>
     </form>
+    <button type="submit" class="btn-pay">결제하기</button>
+  </section>
   `,
-  styles: []
+  styles: [`
+  .pay{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: 1px solid #aaa;
+    background-color: #ccc;
+  }
+  `]
 })
 export class YapenPayComponent implements OnInit {
   name: string;
