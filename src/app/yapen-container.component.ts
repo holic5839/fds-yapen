@@ -12,6 +12,8 @@ export interface Room {
 @Component({
   selector: 'app-yapen-container',
   template: `
+    <app-yapen-searchbar></app-yapen-searchbar>
+    <app-yapen-list [rooms]="rooms"></app-yapen-list>
   `,
   styles: []
 })
@@ -20,7 +22,6 @@ export interface Room {
 
 export class YapenContainerComponent implements OnInit {
   rooms: Room[];
-
   constructor() { }
 
   ngOnInit() {

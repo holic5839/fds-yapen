@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <app-yapen-container></app-yapen-container>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

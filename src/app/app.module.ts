@@ -9,6 +9,7 @@ import { YapenSearchbarComponent } from './yapen-searchbar.component';
 import { YapenListComponent } from './yapen-list.component';
 import { YapenReserveComponent } from './yapen-reserve.component';
 import { YapenPayComponent } from './yapen-pay.component';
+import { AppRouterModule } from './app.router.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,13 @@ import { YapenPayComponent } from './yapen-pay.component';
     YapenPayComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule { }
