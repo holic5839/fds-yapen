@@ -28,7 +28,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [`
   .pay{
     position: absolute;
-    top: 30%;
+    top: 29%;
     left: 40%;
     border: 1px solid #aaa;
     background-color: #ccc;
