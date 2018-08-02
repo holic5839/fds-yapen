@@ -5,12 +5,14 @@ import { Room } from './yapen-container.component';
 @Component({
   selector: 'app-yapen-list',
   template: `
+
     <ul>
       <li>이름 : 애월펜션</li>
       <li>가격 : 256,000</li>
       <li>지역 : 제주도</li>
     </ul>
   <button class="btn" type="submit" value="list" (click)="moveToReservePage()">상세 정보 보기</button>
+
   `,
   styles: []
 })

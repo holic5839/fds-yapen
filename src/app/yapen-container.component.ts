@@ -10,10 +10,14 @@ export interface Room {
   roomMaxMember: number;
   roomFee: number;
 }
+
 @Component({
   selector: 'app-yapen-container',
   template: `
-    <app-yapen-reserve [rooms]="rooms"></app-yapen-reserve>
+
+  <app-yapen-list>
+  </app-yapen-list>
+
 `,
 
   styles: []
