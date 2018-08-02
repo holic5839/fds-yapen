@@ -6,11 +6,10 @@ import { Room } from './yapen-container.component';
   selector: 'app-yapen-list',
   template: `
   <ul>
-    <li *ngFor="let room of rooms">
-      이름 : {{ room.roomName }} 가격 : {{ room.roomFee }} 지역 : {{ room.roomRegion }}
-    </li>
+    <li *ngFor="let room of rooms"> {{ rooms.roomName }} }</li>
   </ul>
   <button class="btn" type="submit" value="list" onclick="">상세 정보 보기</button>
+  <pre> {{ rooms | json}} </pre>
   `,
   styles: []
 })
