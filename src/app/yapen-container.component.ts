@@ -14,8 +14,10 @@ export interface Room {
 @Component({
   selector: 'app-yapen-container',
   template: `
+
   <app-yapen-list>
   </app-yapen-list>
+
 `,
 
   styles: []

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
 
   <section class="pay">
-    <label><input type="radio">무통장 입금</label>
+    <label><input type="radio" checked>무통장 입금</label>
     <form action="">
       <ul>
         <li>입금은행:
@@ -18,11 +18,11 @@ import { Component, OnInit } from '@angular/core';
             <option value="">광주은행</option>
           </select>
         </li>
-        <li>입금자명: <input type="text" name="userName" [(ngModel)]="name" (keyup.enter)="getUserName()">
+        <li>입금자명: <input type="text" name="userName" [(ngModel)]="name">
         </li>
       </ul>
     </form>
-    <button type="submit" class="btn-pay">결제하기</button>
+    <button type="submit" class="btn-pay" (click)="moveToFinishPage()">결제하기</button>
   </section>
   `,
   styles: [`
@@ -43,10 +43,10 @@ export class YapenPayComponent implements OnInit {
   ngOnInit() {
   }
 
-  getUserName() {
-    this.name = '';
+  moveToFinishPage() {
+    console.log('finish');
+    !this.name ? alert('입금자명을 입력하세요.')
+    : location.href = 'http://localhost:4200/#/payfinish';
   }
 
 }
-
-// (keyup.enter)="getUserName($event.target)"

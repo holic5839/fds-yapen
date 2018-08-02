@@ -11,6 +11,7 @@ import { YapenSearchbarComponent } from './yapen-searchbar.component';
 import { YapenListComponent } from './yapen-list.component';
 import { YapenReserveComponent } from './yapen-reserve.component';
 import { YapenPayComponent } from './yapen-pay.component';
+import { YapenPayfinishComponent } from './yapen-payfinish.component';
 
 
 
@@ -23,7 +24,8 @@ import { YapenPayComponent } from './yapen-pay.component';
     YapenSearchbarComponent,
     YapenListComponent,
     YapenReserveComponent,
-    YapenPayComponent
+    YapenPayComponent,
+    YapenPayfinishComponent
   ],
 
   imports: [
