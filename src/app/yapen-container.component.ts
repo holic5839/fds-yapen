@@ -1,6 +1,7 @@
 // ***** 수정 금지 ***** //
 
 import { Component, OnInit } from '@angular/core';
+
 export interface Room {
   id: number;
   roomName: string;
@@ -9,10 +10,16 @@ export interface Room {
   roomMaxMember: number;
   roomFee: number;
 }
+
 @Component({
   selector: 'app-yapen-container',
   template: `
-  `,
+
+  <app-yapen-list>
+  </app-yapen-list>
+
+`,
+
   styles: []
 })
 
@@ -20,7 +27,6 @@ export interface Room {
 
 export class YapenContainerComponent implements OnInit {
   rooms: Room[];
-
   constructor() { }
 
   ngOnInit() {
